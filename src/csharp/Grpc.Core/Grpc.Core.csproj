@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <Import Project="Version.csproj.include" />
   <Import Project="Common.csproj.include" />
@@ -11,7 +11,7 @@
     <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.5</TargetFrameworks>
     <AssemblyName>Grpc.Core</AssemblyName>
-    <PackageId>Greenliff.Grpc.Core</PackageId>
+    <PackageId>Grpc.Core</PackageId>
     <PackageTags>gRPC RPC Protocol HTTP/2</PackageTags>
     <PackageProjectUrl>https://github.com/grpc/grpc</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/grpc/grpc/blob/master/LICENSE</PackageLicenseUrl>
@@ -73,6 +73,13 @@
   </ItemGroup>
 
   <Import Project="NativeDeps.csproj.include" />
+
+  <!-- Greenliff specific, .targets files must match the nuget package id -->
+  <Target Name="CopyFiles" BeforeTargets="Build">
+    <Message Text="MonoAndroid\Grpc.Core.targets -&gt; MonoAndroid\Greenliff.Grpc.Core.targets HHHH" />
+    <Copy SourceFiles="build\MonoAndroid\Grpc.Core.targets" DestinationFiles="build\MonoAndroid\Greenliff.Grpc.Core.targets" SkipUnchangedFiles="true" />
+    <Copy SourceFiles=".\build\net45\Grpc.Core.targets" DestinationFiles=".\build\net45\Greenliff.Grpc.Core.targets" SkipUnchangedFiles="true" />
+  </Target>
 
   <ItemGroup>
     <Content Include="build\**\*.*">
