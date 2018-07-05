@@ -48,11 +48,11 @@
       <Pack>true</Pack>
     </Content>
     <Content Include="..\nativelibs\csharp_ext_monoandroid81_x86\libgrpc_csharp_ext.so">
-      <PackagePath>runtimes/monoandroid-armeabi-v7a/native/libgrpc_csharp_ext.so</PackagePath>
+      <PackagePath>runtimes/monoandroid/armeabi-v7a/libgrpc_csharp_ext.so</PackagePath>
       <Pack>true</Pack>
     </Content>
     <Content Include="..\nativelibs\csharp_ext_monoandroid81_x64\libgrpc_csharp_ext.so">
-      <PackagePath>runtimes/monoandroid-arm64-v8a/native/libgrpc_csharp_ext.so</PackagePath>
+      <PackagePath>runtimes/monoandroid/arm64-v8a/libgrpc_csharp_ext.so</PackagePath>
       <Pack>true</Pack>
     </Content>
   </ItemGroup>
@@ -72,7 +72,7 @@
     <PackageReference Include="System.Threading.ThreadPool" Version="4.0.10" />
   </ItemGroup>
 
-  <Import Project="NativeDeps.csproj.include" />
+  <!--<Import Project="NativeDeps.csproj.include" />-->
 
   <!-- Greenliff specific, .targets files must match the nuget package id -->
   <Target Name="CopyFiles" BeforeTargets="Build">

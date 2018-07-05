@@ -37,8 +37,8 @@
     <file src="..\nativelibs\csharp_ext_macos_x86\libgrpc_csharp_ext.dylib" target="runtimes\osx\native\libgrpc_csharp_ext.x86.dylib" />
     <file src="..\nativelibs\csharp_ext_windows_x64\grpc_csharp_ext.dll" target="runtimes\win\native\grpc_csharp_ext.x64.dll" />
     <file src="..\nativelibs\csharp_ext_windows_x86\grpc_csharp_ext.dll" target="runtimes\win\native\grpc_csharp_ext.x86.dll" />
-    <file src="..\nativelibs\csharp_ext_monoandroid81_x64\libgrpc_csharp_ext.so" target="runtimes\monoandroid-arm64-v8a\native\libgrpc_csharp_ext.so" />
-    <file src="..\nativelibs\csharp_ext_monoandroid81_x86\libgrpc_csharp_ext.so" target="runtimes\monoandroid-armeabi-v7a\native\libgrpc_csharp_ext.so" />
+    <file src="..\nativelibs\csharp_ext_monoandroid81_x64\libgrpc_csharp_ext.so" target="runtimes\monoandroid\arm64-v8a\libgrpc_csharp_ext.so" />
+    <file src="..\nativelibs\csharp_ext_monoandroid81_x86\libgrpc_csharp_ext.so" target="runtimes\monoandroid\armeabi-v7a\libgrpc_csharp_ext.so" />
     <file src="build\**\$id$.*" target="build" />
   </files>
 </package>
