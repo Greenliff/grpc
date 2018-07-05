@@ -76,7 +76,7 @@
 
   <!-- Greenliff specific, .targets files must match the nuget package id -->
   <Target Name="CopyFiles" BeforeTargets="Build">
-    <Message Text="MonoAndroid\Grpc.Core.targets -&gt; MonoAndroid\Greenliff.Grpc.Core.targets HHHH" />
+    <Message Text="Grpc.Core.targets -&gt; Greenliff.Grpc.Core.targets" />
     <Copy SourceFiles="build\MonoAndroid\Grpc.Core.targets" DestinationFiles="build\MonoAndroid\Greenliff.Grpc.Core.targets" SkipUnchangedFiles="true" />
     <Copy SourceFiles=".\build\net45\Grpc.Core.targets" DestinationFiles=".\build\net45\Greenliff.Grpc.Core.targets" SkipUnchangedFiles="true" />
   </Target>
