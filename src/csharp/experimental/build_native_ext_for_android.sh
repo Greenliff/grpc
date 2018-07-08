@@ -23,7 +23,7 @@ mkdir -p build
 cd build
 
 # set to the location where Android SDK is installed
-ANDROID_SDK_PATH="/home/ahouben/Android/Sdk"
+ANDROID_SDK_PATH="$HOME/Android/Sdk"
 
 # set to location where Android NDK is installed, usually a subfolder of Android SDK
 # install the Android NDK through the Android SDK Manager
