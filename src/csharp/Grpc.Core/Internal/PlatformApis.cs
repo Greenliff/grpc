@@ -97,7 +97,8 @@ namespace Grpc.Core.Internal
         }
 
         /// <summary>
-        /// true if running on Xamarin platform.
+        /// true if running on a Xamarin platform (either Xamarin.Android or Xamarin.iOS),
+        /// false otherwise.
         /// </summary>
         public static bool IsXamarin
         {
@@ -105,7 +106,7 @@ namespace Grpc.Core.Internal
         }
 
         /// <summary>
-        /// true if running on Xamarin.MonoTouch platform (iOS).
+        /// true if running on Xamarin.iOS, false otherwise.
         /// </summary>
         public static bool IsXamariniOS
         {
@@ -113,7 +114,7 @@ namespace Grpc.Core.Internal
         }
 
         /// <summary>
-        /// true if running on Xamarin.Android platform.
+        /// true if running on Xamarin.Android, false otherwise.
         /// </summary>
         public static bool IsXamarinAndroid
         {

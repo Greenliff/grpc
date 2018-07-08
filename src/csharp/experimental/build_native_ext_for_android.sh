@@ -47,4 +47,3 @@ ${CMAKE_PATH} ../.. \
   -DANDROID_NDK="${ANDROID_NDK_PATH}"
 
 make -j4 grpc_csharp_ext
-
