@@ -7,9 +7,8 @@
     <Copyright>Copyright 2015, Google Inc.</Copyright>
     <AssemblyTitle>gRPC C# Core</AssemblyTitle>
     <VersionPrefix>$(GrpcCsharpVersion)</VersionPrefix>
-    <Authors>Google Inc., Greenliff AG</Authors>
-    <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.5</TargetFrameworks>
+    <Authors>Google Inc.</Authors>
+    <TargetFrameworks>net45;netstandard1.5</TargetFrameworks>
     <AssemblyName>Grpc.Core</AssemblyName>
     <PackageId>Grpc.Core</PackageId>
     <PackageTags>gRPC RPC Protocol HTTP/2</PackageTags>
@@ -72,14 +71,7 @@
     <PackageReference Include="System.Threading.ThreadPool" Version="4.0.10" />
   </ItemGroup>
 
-  <!--<Import Project="NativeDeps.csproj.include" />-->
-
-  <!-- Greenliff specific, .targets files must match the nuget package id -->
-  <Target Name="CopyFiles" BeforeTargets="Build">
-    <Message Text="Grpc.Core.targets -&gt; Greenliff.Grpc.Core.targets" />
-    <Copy SourceFiles="build\MonoAndroid\Grpc.Core.targets" DestinationFiles="build\MonoAndroid\Greenliff.Grpc.Core.targets" SkipUnchangedFiles="true" />
-    <Copy SourceFiles=".\build\net45\Grpc.Core.targets" DestinationFiles=".\build\net45\Greenliff.Grpc.Core.targets" SkipUnchangedFiles="true" />
-  </Target>
+  <Import Project="NativeDeps.csproj.include" />
 
   <ItemGroup>
     <Content Include="build\**\*.*">
