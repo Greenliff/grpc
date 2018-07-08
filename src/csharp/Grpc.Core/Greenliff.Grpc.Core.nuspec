@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>Greenliff.Grpc.Core</id>
-    <version>1.14.18-dev</version>
+    <version>1.14.20-dev</version>
     <authors>Google Inc., Greenliff AG</authors>
     <owners>Google Inc., Greenliff AG</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://github.com/grpc/grpc/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/grpc/grpc</projectUrl>
-    <description>Greenliff.Grpc.Core</description>
+    <description>Package Description</description>
     <copyright>Copyright 2015, Google Inc.</copyright>
     <tags>gRPC RPC Protocol HTTP/2</tags>
     <dependencies>
@@ -29,8 +29,8 @@
     </frameworkAssemblies>
   </metadata>
   <files>
-    <file src="bin\$configuration$\net45\Grpc.Core.*" target="lib\net45" />
-    <file src="bin\$configuration$\netstandard1.5\Grpc.Core.*" target="lib\netstandard1.5" />
+    <file src="bin\$configuration$\net45\Grpc.Core.*" target="lib\net45" exclude="**\*.deps.json" />
+    <file src="bin\$configuration$\netstandard1.5\Grpc.Core.*" target="lib\netstandard1.5" exclude="**\*.deps.json" />
     <file src="..\nativelibs\csharp_ext_linux_x64\libgrpc_csharp_ext.so" target="runtimes\linux\native\libgrpc_csharp_ext.x64.so" />
     <file src="..\nativelibs\csharp_ext_linux_x86\libgrpc_csharp_ext.so" target="runtimes\linux\native\libgrpc_csharp_ext.x86.so" />
     <file src="..\nativelibs\csharp_ext_macos_x64\libgrpc_csharp_ext.dylib" target="runtimes\osx\native\libgrpc_csharp_ext.x64.dylib" />
@@ -39,6 +39,6 @@
     <file src="..\nativelibs\csharp_ext_windows_x86\grpc_csharp_ext.dll" target="runtimes\win\native\grpc_csharp_ext.x86.dll" />
     <file src="..\nativelibs\csharp_ext_monoandroid81_x64\libgrpc_csharp_ext.so" target="runtimes\monoandroid\arm64-v8a\libgrpc_csharp_ext.so" />
     <file src="..\nativelibs\csharp_ext_monoandroid81_x86\libgrpc_csharp_ext.so" target="runtimes\monoandroid\armeabi-v7a\libgrpc_csharp_ext.so" />
-    <file src="build\**\$id$.*" target="build" />
+    <file src="build\**\$id$*" target="build" />
   </files>
 </package>
