@@ -213,7 +213,7 @@ namespace Grpc.Core.Internal
             }
             if (PlatformApis.IsLinux)
             {
-                return string.Format("libgrpc_csharp_ext.{0}.so", architecture);;
+                return string.Format("libgrpc_csharp_ext.{0}.so", architecture);
             }
             if (PlatformApis.IsMacOSX)
             {
